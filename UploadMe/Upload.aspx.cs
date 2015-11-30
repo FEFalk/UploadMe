@@ -17,5 +17,20 @@ namespace UploadMe
         {
             Response.Redirect("Home.aspx");
         }
+
+        protected void photoButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void submitButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void logoutButton_Click(object sender, EventArgs e)
+        {
+            Session["Login"] = "0";
+        }
     }
 }

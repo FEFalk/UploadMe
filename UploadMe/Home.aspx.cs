@@ -12,11 +12,18 @@ namespace UploadMe
         protected void Page_Load(object sender, EventArgs e)
         {
             
+            if(Session["Login"]==null){
+                Session["Login"] = "0";
+            }
+            
         }
 
         protected void Unnamed_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Upload.aspx");  
+            if((string)Session["Login"] == "1")
+                Response.Redirect("Upload.aspx");  
+            else
+                Response.Redirect("Login.aspx");  
         }
 
     }

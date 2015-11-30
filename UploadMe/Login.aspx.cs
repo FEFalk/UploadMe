@@ -13,5 +13,12 @@ namespace UploadMe
         {
 
         }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            Session["Login"] = "1";
+            Response.Redirect("Upload.aspx");
+        }
+
     }
 }

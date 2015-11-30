@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="UploadMe.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="UploadMe.WebForm1" EnableEventValidation="false" %>
 
 <!DOCTYPE html>
 
@@ -64,12 +64,14 @@
 	</script>
 	
 </head>
+
 <body>
+    <form runat="server">
     <div class="container" id="Header">
 	
 	<img src="images/bbc.png" alt="Unable to show image."/>
 	<span class="space"></span>
-    <form runat="server" style="color : red; float : left; width : 50px; height : 20px;"><asp:Button OnClick="Unnamed_Click" runat="server" Text="Upload"/></form>
+    <asp:Button OnClick="Unnamed_Click" style="color : red; float : left; width : 50px; height : 20px;" runat="server" Text="Upload"/>
 	<ul id="headerMenu">
             
   			<li><button class = "active" id="newsTabButton" onclick="showHeaderDiv('newsTabView', 'newsTabButton');">News</button></li>
@@ -270,5 +272,6 @@
 	</div>
 		
 </div>
+</form>
 </body>
 </html>

@@ -386,18 +386,25 @@ body{
 	margin: 0;
 	padding: 0;
 }
-form{
-	float: left;
+#searchBar{
+    float: left;
 	margin: 9px 0px 0px 10px;
-	
-}
-
-input{
 	background-color: #dfdfff;
 	border: 0;
 	font-weight: bold;
 	font-size: 11pt;
 	height: 25px;
-	width: 93%;
+	width: 100px;
 	padding-left: 5px;
+}
+#uploadDiv{
+    margin : 15px;
+}
+
+#uploadDiv .textBox, .button, .label, .dropDown{
+    margin : 15px ;
+}
+#uploadDiv #mainText{
+    resize: none;
+    height : 200px;
 }

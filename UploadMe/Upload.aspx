@@ -7,11 +7,12 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
+    <form runat="server">
     <div class="container" id="Header">
 	
 	<img src="images/bbc.png" alt="Unable to show image."/>
 	<span class="space"></span>
-        <form runat="server" style="color : red; float : left; width : 50px; height : 20px;"><asp:Button OnClick="Unnamed_Click" runat="server" Text="Home"/></form>
+    <asp:Button OnClick="Unnamed_Click" style="color : red; float : left; width : 50px; height : 20px;" runat="server" Text="Home"/>
 	<ul id="headerMenu">
             
   			<li><button class = "active" id="newsTabButton" onclick="showHeaderDiv('newsTabView', 'newsTabButton');">News</button></li>
@@ -23,8 +24,8 @@
   			<li><button class = "inactive" id="radioTabButton" onclick="showHeaderDiv('radioTabView', 'radioTabButton');">Radio</button></li>
 			<li><button class = "inactive" id="moreTabButton" onclick="showHeaderDiv('moreTabView', 'moreTabButton');">More...</button></li>	
 	</ul>
-	
-	<form><input type="text" name="search" value="Search"></form>
+	    
+	<input type="text" name="search" value="Search" id="searchBar"/>
 	
 	<div class="container" id="headerTabs">		
 		<div id="newsTabView" class="headerTabList">
@@ -55,5 +56,32 @@
 	</div>
 </div>
 
+
+    <div id="Wrapper">
+        <div id="uploadDiv">
+            <asp:TextBox CssClass="textBox" ID="titleName" runat="server" >Enter title...</asp:TextBox>
+            <br />
+            <asp:TextBox CssClass="textBox" ID="mainText" runat="server" TextMode="multiline" Columns="50" Rows="5">Enter main text...</asp:TextBox>
+            <br />
+            <asp:Button CssClass="button" ID="photoButton" runat="server" OnClick="photoButton_Click" Text="Upload Photo"></asp:Button>
+            <br />
+            <asp:Label CssClass="label" ID="photoPathName" runat="server" Text="Photo: "></asp:Label>
+            <br />
+            <asp:DropDownList CssClass="dropDown" runat="server" ID="categoryList"></asp:DropDownList>
+            <br />
+            <asp:Button CssClass="button" ID="submitButton" runat="server" OnClick="submitButton_Click" Text="Submit"></asp:Button>
+
+            <br />
+            <asp:Button CssClass="button" ID="logoutButton" runat="server" OnClick="logoutButton_Click" Text="Logout"></asp:Button>
+
+            
+        </div>
+   
+    </div>
+
+
+
+
+   </form>
 </body>
 </html>
