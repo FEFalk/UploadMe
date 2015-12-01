@@ -61,22 +61,19 @@
         <div id="uploadDiv">
             <asp:TextBox CssClass="textBox" ID="titleName" runat="server" >Enter title...</asp:TextBox>
             <br />
-            <asp:TextBox CssClass="textBox" ID="mainText" runat="server" TextMode="multiline" Columns="50" Rows="5">Enter main text...</asp:TextBox>
+            <asp:TextBox CssClass="textBox" ID="mainText" name="mainText" runat="server" TextMode="multiline" Columns="50" Rows="5">Enter main text...</asp:TextBox>
             <br />
-            <asp:Button CssClass="button" ID="photoButton" runat="server" OnClick="photoButton_Click" Text="Upload Photo"></asp:Button>
-            <br />
-            <asp:Label CssClass="label" ID="photoPathName" runat="server" Text="Photo: "></asp:Label>
+            <asp:FileUpload id="FileUpload1" runat="server"/>
             <br />
             <asp:DropDownList CssClass="dropDown" runat="server" ID="categoryList"></asp:DropDownList>
             <br />
-            <asp:Button CssClass="button" ID="submitButton" runat="server" OnClick="submitButton_Click" Text="Submit"></asp:Button>
+            <asp:Button CssClass="button" ID="submitButton" runat="server" PostBackUrl="~/Response.aspx" Text="Submit"></asp:Button>
 
             <br />
             <asp:Button CssClass="button" ID="logoutButton" runat="server" OnClick="logoutButton_Click" Text="Logout"></asp:Button>
 
             
         </div>
-   
     </div>
 
 
