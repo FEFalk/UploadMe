@@ -13,7 +13,7 @@
 	
 	<img src="images/bbc.png" alt="Unable to show image."/>
 	<span class="space"></span>
-    <asp:Button ID="homeButton" OnClick="homeButton_Click" style="color : red; float : left; width : 50px; height : 20px;" runat="server" Text="Home"/>
+    <asp:Button ID="homeButton" OnClick="homeButton_Click" style="color : red; float : left; font-weight : bold;" runat="server" Text="Home"/>
 	<ul id="headerMenu">
             
   			<li><button class = "active" id="newsTabButton" onclick="showHeaderDiv('newsTabView', 'newsTabButton');">News</button></li>

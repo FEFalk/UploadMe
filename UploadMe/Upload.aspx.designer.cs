@@ -49,13 +49,13 @@ namespace UploadMe {
         protected global::System.Web.UI.WebControls.TextBox mainText;
         
         /// <summary>
-        /// FileUpload1 control.
+        /// photoPathName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+        protected global::System.Web.UI.WebControls.Label photoPathName;
         
         /// <summary>
         /// uploadButton control.
@@ -83,6 +83,15 @@ namespace UploadMe {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList categoryList;
+        
+        /// <summary>
+        /// FileUpload1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
         
         /// <summary>
         /// submitButton control.
