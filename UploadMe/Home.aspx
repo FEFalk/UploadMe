@@ -71,7 +71,7 @@
 	
 	<img src="images/bbc.png" alt="Unable to show image."/>
 	<span class="space"></span>
-    <asp:Button OnClick="Unnamed_Click" style="color : red; float : left; width : 50px; height : 20px;" runat="server" Text="Upload"/>
+    <asp:Button OnClick="Unnamed_Click" style="color : red; float : left; font-weight : bold" runat="server" Text="Upload"/>
 	<ul id="headerMenu">
             
   			<li><button class = "active" id="newsTabButton" onclick="showHeaderDiv('newsTabView', 'newsTabButton');">News</button></li>
@@ -84,7 +84,7 @@
 			<li><button class = "inactive" id="moreTabButton" onclick="showHeaderDiv('moreTabView', 'moreTabButton');">More...</button></li>	
 	</ul>
 	
-	<form><input type="text" name="search" value="Search"></form>
+	<input type="text" name="search" value="Search" id="searchBar" />
 	
 	<div class="container" id="headerTabs">		
 		<div id="newsTabView" class="headerTabList">

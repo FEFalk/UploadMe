@@ -13,14 +13,53 @@ namespace UploadMe
         {
 
         }
-        protected void Unnamed_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Home.aspx");
-        }
 
         protected void logoutButton_Click(object sender, EventArgs e)
         {
             Session["Login"] = "0";
+            Response.Redirect("Home.aspx");
+        }
+        
+        protected void uploadButton_Click(object sender, EventArgs e)
+        {
+            string saveDir = @"\Data\";
+            string appPath = Request.PhysicalApplicationPath;
+            if (FileUpload1.HasFile)
+            {
+                int fileSize = FileUpload1.PostedFile.ContentLength;
+                if (fileSize < 2100000)
+                {
+                    // Get the name of the file to upload.
+                    string savePath = appPath + saveDir +
+                    Server.HtmlEncode(FileUpload1.FileName);
+
+                    // Call the SaveAs method to save the 
+                    // uploaded file to the specified path.
+                    // This example does not perform all
+                    // the necessary error checking.               
+                    // If a file with the same name
+                    // already exists in the specified path,  
+                    // the uploaded file overwrites it.
+                    FileUpload1.SaveAs(savePath);
+
+                    photoPath2.Value = Server.HtmlEncode(FileUpload1.FileName);
+                    uploadedImage.ImageUrl= "Data/" + photoPath2.Value;
+                }
+                else
+                {
+                    // Notify the user why their file was not uploaded.
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Your file was not uploaded because it exceeds the 2 MB size limit.')", true);
+                }
+            }
+        }
+
+        protected void homeButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Home.aspx");
+        }
+
+        protected void photoPath2_ValueChanged(object sender, EventArgs e)
+        {
         }
     }
 }

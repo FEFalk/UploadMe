@@ -12,7 +12,8 @@
 	
 	<img src="images/bbc.png" alt="Unable to show image."/>
 	<span class="space"></span>
-    <asp:Button OnClick="Unnamed_Click" style="color : red; float : left; width : 50px; height : 20px;" runat="server" Text="Home"/>
+    <asp:Button ID="homeButton" OnClick="homeButton_Click" style="color : red; float : left; font-weight : bold;" runat="server" Text="Home"/>
+    <asp:Button CssClass="button" ID="logoutButton" runat="server" OnClick="logoutButton_Click" Text="Logout"></asp:Button>
 	<ul id="headerMenu">
             
   			<li><button class = "active" id="newsTabButton" onclick="showHeaderDiv('newsTabView', 'newsTabButton');">News</button></li>
@@ -59,26 +60,35 @@
 
     <div id="Wrapper">
         <div id="uploadDiv">
+            <h2>UploadMe!</h2>
+            <h4>Title:</h4>
             <asp:TextBox CssClass="textBox" ID="titleName" runat="server" >Enter title...</asp:TextBox>
+            <h4>Main text:</h4>
+            <asp:TextBox CssClass="textBox" ID="mainText" runat="server" TextMode="multiline" Columns="50" Rows="5">Enter main text...</asp:TextBox>
             <br />
-            <asp:TextBox CssClass="textBox" ID="mainText" name="mainText" runat="server" TextMode="multiline" Columns="50" Rows="5">Enter main text...</asp:TextBox>
+            <h4>Upload media:</h4>
+            <asp:FileUpload CssClass="fileUpload" ID="FileUpload1" runat="server"/>
             <br />
-            <asp:FileUpload id="FileUpload1" runat="server"/>
+            <asp:Button CssClass="button" ID="uploadButton" runat="server" OnClick="uploadButton_Click" Text="Upload"></asp:Button>
             <br />
-            <asp:DropDownList CssClass="dropDown" runat="server" ID="categoryList"></asp:DropDownList>
+            <asp:Image CssClass="image" ID="uploadedImage" runat="server" Width="75px" Height="75px"/>
+            <br />
+            <h4>Pick a category:</h4>
+            <asp:DropDownList CssClass="dropDown" runat="server" ID="categoryList">
+                <asp:ListItem Text="Politics"></asp:ListItem>
+                <asp:ListItem Text="Culture"></asp:ListItem>
+                <asp:ListItem Text="Sport"></asp:ListItem>
+                <asp:ListItem Text="Travel"></asp:ListItem>
+                <asp:ListItem Text="Future"></asp:ListItem>
+                <asp:ListItem Text="TV"></asp:ListItem>
+                <asp:ListItem Text="Radio"></asp:ListItem>
+                <asp:ListItem Text="Other"></asp:ListItem>
+            </asp:DropDownList>
             <br />
             <asp:Button CssClass="button" ID="submitButton" runat="server" PostBackUrl="~/Response.aspx" Text="Submit"></asp:Button>
-
-            <br />
-            <asp:Button CssClass="button" ID="logoutButton" runat="server" OnClick="logoutButton_Click" Text="Logout"></asp:Button>
-
-            
+            <asp:hiddenfield runat="server" ID="photoPath2" OnValueChanged="photoPath2_ValueChanged" Value=""></asp:hiddenfield>
         </div>
     </div>
-
-
-
-
    </form>
 </body>
 </html>

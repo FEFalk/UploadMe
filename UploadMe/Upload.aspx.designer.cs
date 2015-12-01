@@ -13,6 +13,24 @@ namespace UploadMe {
     public partial class Upload {
         
         /// <summary>
+        /// homeButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button homeButton;
+        
+        /// <summary>
+        /// logoutButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button logoutButton;
+        
+        /// <summary>
         /// titleName control.
         /// </summary>
         /// <remarks>
@@ -40,6 +58,24 @@ namespace UploadMe {
         protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
         
         /// <summary>
+        /// uploadButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button uploadButton;
+        
+        /// <summary>
+        /// uploadedImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image uploadedImage;
+        
+        /// <summary>
         /// categoryList control.
         /// </summary>
         /// <remarks>
@@ -58,12 +94,12 @@ namespace UploadMe {
         protected global::System.Web.UI.WebControls.Button submitButton;
         
         /// <summary>
-        /// logoutButton control.
+        /// photoPath2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button logoutButton;
+        protected global::System.Web.UI.WebControls.HiddenField photoPath2;
     }
 }

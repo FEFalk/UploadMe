@@ -13,6 +13,7 @@
 	
 	<img src="images/bbc.png" alt="Unable to show image."/>
 	<span class="space"></span>
+    <asp:Button ID="homeButton" OnClick="homeButton_Click" style="color : red; float : left; width : 50px; height : 20px;" runat="server" Text="Home"/>
 	<ul id="headerMenu">
             
   			<li><button class = "active" id="newsTabButton" onclick="showHeaderDiv('newsTabView', 'newsTabButton');">News</button></li>
@@ -58,25 +59,19 @@
 
     
     <div id="Wrapper">
-        <!-- NEWS FEATURE -->
-	    <div class="container" id="newsFeature">
-		    <h2>News feature</h2>
-		
-		    <div class="newsFeatureText">
-			    <h3><%=Request.Form["titleName"] %></h3>	
-			    <p>	
-				    <%=Request.Form["mainText"] %>
-			    </p>
-            <asp:Label runat="server" ID="mainText2"></asp:Label>
-		    </div>
-		
-		    <img src="images/politiker.jpg" alt="Unable to show image."/>
-	    </div>
+        <div style="float:left">
+            <div class="container" id="spotlightDiv">
+                <asp:Image CssClass="image" ID="uploadedImage" runat="server"/>
+
+		        <h3 id="responseTitle"><%=Request.Form["titleName"] %></h3>
+                <h4><%=Request.Form["categoryList"] %></h4>
+		        <p id="responseText">	
+			        <%=Request.Form["mainText"] %>
+		        </p>
+			    
+	        </div>
+        </div>
     </div>
-
-
-
-
    </form>
 
 </body>

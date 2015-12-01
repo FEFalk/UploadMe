@@ -115,16 +115,18 @@
 </div>
 
     <form id="form1" runat="server">
-    <div>
-        Username: <asp:TextBox runat="server" ID="txtUser" />
-         <br />
-        Password: <asp:TextBox runat="server" ID="txtPass" TextMode="Password" />
-        <!--Lägg till validator-->
-        <br />
-        <asp:Button runat="server" ID="btnLogin" Text="Login" OnClick="btnLogin_Click" />
+    <div id="Wrapper">
+        <div>
+            Username: <asp:TextBox runat="server" ID="txtUser" />
+            <br />
+            Password: <asp:TextBox runat="server" ID="txtPass" TextMode="Password" />
+            <!--Lägg till validator-->
+            <br />
+            <asp:Button runat="server" ID="btnLogin" Text="Login" OnClick="btnLogin_Click" />
 
-        <br />
-        <asp:Label runat="server" ID="lblTest" />
+            <br />
+            <asp:Label runat="server" ID="lblTest" />
+        </div>
     </div>
     </form>
 </body>
