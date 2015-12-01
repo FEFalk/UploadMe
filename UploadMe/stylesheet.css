@@ -1,22 +1,32 @@
-﻿div#Header{
-	width: 100%;
-	height: 45px;
+﻿/*Standard*/
+button{
+  	border      : 0;
+  	font-family : inherit;
+  	cursor      : pointer;
+}
+h2{
+	margin: 0px 12px 0px;
+	color: #005b99;
+	font-size: 28pt
+}
+h3{
+	margin: 0pt;
+	color: #005b99;
+	font-size: 24pt
+}
+p{
+	margin: 0pt;
+	text-align: left;
+	font-size: 10pt
+}
+
+
+body{
 	margin: 0;
-	margin-bottom: 55px;
 	padding: 0;
-	background-color : white;
-	border-bottom: solid #bfbfbf 1pt;
-	font-family: verdana; 
-	overflow: auto;
 }
 
-
-div#Wrapper{
-	width : 1250px;
-	margin: auto;
-	background-color : white;
-	font-family: verdana;
-}
+/*Classes*/
 .AD{
 	position : absolute;
 	right : 470px;
@@ -66,7 +76,75 @@ div#Wrapper{
 	margin-bottom : 10px;
 	color : white;
 }
+.inactive{
+	background-color: transparent;
+}
+.inactive:hover{
+	background-color: #e6e6e6;
+}
 
+.active{
+	background-color: white;
+}
+
+.container#headerTabList{
+	margin: 0px;
+}
+.headerTabList{
+	margin : 0px 0px 0px;
+	background-color : white;
+	text-align : center;
+
+}
+.space{
+	float: left;
+	height: 100%;
+	border-left: solid #bfbfbf 1pt;
+	margin-left: 12px;
+}
+.container#popularNews, .container#spotlightDiv{
+	margin-left : 2px;
+	margin-top : 2px;
+	float : right;
+	color : black;
+	width : 420px;
+	clear: right;
+}
+.container#popularNews h2{
+	font-size: 19pt;
+	margin-left : 6px;
+	margin-top : 2px;
+	color : black;
+	position : relative;
+	padding : 0;
+	margin-bottom : 15px;
+}
+.miniTitles{
+	border-top: 2px solid #d9d9d9;
+	font-size: 10pt;
+	color : #0077b3;
+	padding : 5px 10px;
+	margin : 0;
+	
+}
+.backgroundHeading{
+	background-color : #f2f2f2;
+	font-size : 17pt;
+	padding : 6px 10px 6px;
+}
+.divHeader{
+	width : inherit;
+	padding: 0px;
+	background-color : lightgrey;
+}
+.popularNewsList{
+	margin : 0px 5px 0px;
+	background-color : white;
+	text-align : left;
+	color : #0077b3;
+}
+
+/*ID*/
 #generalNews{
 	margin-left : 2px;
 	margin-top : 0px;
@@ -99,7 +177,6 @@ div#Wrapper{
 	height : 220px;
 	margin-bottom : 5px;
 }
-
 #generalNews .small{
 	float : right;
 	width : 23%;
@@ -121,7 +198,6 @@ div#Wrapper{
 	margin : 0px 0px 26px;
 	
 }
-
 #Business, #Sport{
 	margin-left : 2px;
 	margin-top : 2px;
@@ -131,7 +207,6 @@ div#Wrapper{
 	clear: left, right;
 	height : 335px;
 }
-
 #Business h3, #Sport h3{
 	padding: 10px 5px 10px;
 	font-size : 14pt;
@@ -142,7 +217,6 @@ div#Wrapper{
 	color : #005b99;
 	border : none;
 }
-
 #Sport img{
 	float : left;
 	width : 40%;
@@ -155,34 +229,6 @@ div#Wrapper{
 	height  : 325px;
 	border-bottom: 2px solid #d9d9d9;
 	padding : 0px 10px 0px;
-}
-
-.container#popularNews, .container#spotlightDiv{
-	margin-left : 2px;
-	margin-top : 2px;
-	float : right;
-	color : black;
-	width : 420px;
-	clear: right;
-}
-.container#popularNews h2{
-	font-size: 19pt;
-	margin-left : 6px;
-	margin-top : 2px;
-	color : black;
-	position : relative;
-	padding : 0;
-	margin-bottom : 15px;
-}
-
-
-.miniTitles{
-	border-top: 2px solid #d9d9d9;
-	font-size: 10pt;
-	color : #0077b3;
-	padding : 5px 10px;
-	margin : 0;
-	
 }
 #spotlightDiv h4.miniTitles:last-child{
 	border-bottom: 2px solid #d9d9d9;
@@ -201,22 +247,87 @@ div#Wrapper{
 	height : 270px;
 	width : 100%;
 }
-.backgroundHeading{
-	background-color : #f2f2f2;
-	font-size : 17pt;
-	padding : 6px 10px 6px;
+#Header img{
+	float : left;
+	width : 110px;
+	height : 70%;
+	margin: 7px 0px 0px 330px;
 }
-.divHeader{
-	width : inherit;
-	padding: 0px;
-	background-color : lightgrey;
+#searchBar{
+    float: left;
+	margin: 9px 0px 0px 10px;
+	background-color: #dfdfff;
+	border: 0;
+	font-weight: bold;
+	font-size: 11pt;
+	height: 25px;
+	width: 100px;
+	padding-left: 5px;
 }
-.popularNewsList{
-	margin : 0px 5px 0px;
+#uploadDiv{
+    margin : 15px;
+}
+#uploadDiv .textBox, .button, .label, .dropDown, .fileUpload{
+    margin : 15px ;
+}
+#uploadDiv #mainText{
+    resize: none;
+    height : 200px;
+}
+
+/*Divs*/
+div#Header{
+	width: 100%;
+	height: 45px;
+	margin: 0;
+	margin-bottom: 55px;
+	padding: 0;
 	background-color : white;
-	text-align : left;
-	color : #0077b3;
+	border-bottom: solid #bfbfbf 1pt;
+	font-family: verdana; 
+	overflow: auto;
 }
+
+div#Wrapper{
+	width : 1250px;
+	margin: auto;
+	background-color : white;
+	font-family: verdana;
+}
+div#sharedTabView{
+	
+}
+div#readTabView{
+	display:none;
+}
+div#WLTabView{
+	display:none;
+}
+div#newsTabView{
+	
+}
+div#sportTabView{
+	display:none;
+}
+div#weatherTabView{
+	display:none;
+}
+div#travelTabView{
+	display:none;
+}
+div#futureTabView{
+	display:none;
+}
+div#tvTabView{
+	display:none;
+}
+div#radioTabView{
+	display:none;
+}
+div#moreTabView{
+	display:none;
+}
+
 
 /*LIST*/
 ol.newsList{
@@ -249,25 +360,16 @@ ol.newsList li:after{
 	float : right;
 	font-family: arial;
 }
-div#sharedTabView{
-	
-}
-div#readTabView{
-	display:none;
-}
-div#WLTabView{
-	display:none;
-}
+
+/*UL*/
 ul#menu {
 	margin : 0px 5px 0px;
     padding: 0px;
 	position : relative;
 }
-
 ul#menu li {
     display: inline;
 }
-
 ul#menu li button {
 	margin : 0px;
 	font-size : 11pt;
@@ -276,64 +378,15 @@ ul#menu li button {
    	text-decoration: none;
     border-radius: 4px 4px 0 0;
 }
-.inactive{
-	background-color: transparent;
-}
-.inactive:hover{
-	background-color: #e6e6e6;
-}
-
-.active{
-	background-color: white;
-}
-
-.container#headerTabList{
-	margin: 0px;
-}
-
 ul#headerMenu li:last-child button{
 	border-right: solid #d9d9d9 1px;
 }
-
-.headerTabList{
-	margin : 0px 0px 0px;
-	background-color : white;
-	text-align : center;
-
-}
-
-div#newsTabView{
-	
-}
-div#sportTabView{
-	display:none;
-}
-div#weatherTabView{
-	display:none;
-}
-div#travelTabView{
-	display:none;
-}
-div#futureTabView{
-	display:none;
-}
-div#tvTabView{
-	display:none;
-}
-div#radioTabView{
-	display:none;
-}
-div#moreTabView{
-	display:none;
-}
-
 ul#headerMenu {
 	margin : 0px 0px 0px 368px;
     padding: 0px;
 	float : left;
 	height: 100%;
 }
-
 ul#headerMenu li {
     display: inline;
 	
@@ -346,65 +399,4 @@ ul#headerMenu li button {
 	border-left: 1pt solid #bfbfbf;
    	text-decoration: none;
 	height : 100%;
-}
-#Header img{
-	float : left;
-	width : 110px;
-	height : 70%;
-	margin: 7px 0px 0px 330px;
-}
-.space{
-	float: left;
-	height: 100%;
-	border-left: solid #bfbfbf 1pt;
-	margin-left: 12px;
-}
-
-button{
-  	border      : 0;
-  	font-family : inherit;
-  	cursor      : pointer;
-}
-h2{
-	margin: 0px 12px 0px;
-	color: #005b99;
-	font-size: 28pt
-}
-h3{
-	margin: 0pt;
-	color: #005b99;
-	font-size: 24pt
-}
-p{
-	margin: 0pt;
-	text-align: left;
-	font-size: 10pt
-}
-
-
-body{
-	margin: 0;
-	padding: 0;
-}
-#searchBar{
-    float: left;
-	margin: 9px 0px 0px 10px;
-	background-color: #dfdfff;
-	border: 0;
-	font-weight: bold;
-	font-size: 11pt;
-	height: 25px;
-	width: 100px;
-	padding-left: 5px;
-}
-#uploadDiv{
-    margin : 15px;
-}
-
-#uploadDiv .textBox, .button, .label, .dropDown{
-    margin : 15px ;
-}
-#uploadDiv #mainText{
-    resize: none;
-    height : 200px;
 }
