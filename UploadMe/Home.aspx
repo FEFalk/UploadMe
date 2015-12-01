@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 	<title>Lab1 Webapplications</title>
-	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css"/>
 	<script>
 	    function showDiv(divID, buttonID) {
 	        document.getElementById(divID).style.display = "block";
