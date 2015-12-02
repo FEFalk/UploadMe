@@ -27,7 +27,7 @@ namespace UploadMe
             if (FileUpload1.HasFile)
             {
                 int fileSize = FileUpload1.PostedFile.ContentLength;
-                if (fileSize < 2100000)
+                if (fileSize < 21000000)
                 {
                     // Get the name of the file to upload.
                     string savePath = appPath + saveDir +
