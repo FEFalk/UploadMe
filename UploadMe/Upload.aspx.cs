@@ -26,29 +26,36 @@ namespace UploadMe
             string appPath = Request.PhysicalApplicationPath;
             if (FileUpload1.HasFile)
             {
+               
                 int fileSize = FileUpload1.PostedFile.ContentLength;
-                if (fileSize < 2100000)
+                if (fileSize < 9000000)
                 {
-                    // Get the name of the file to upload.
-                    string savePath = appPath + saveDir +
-                    Server.HtmlEncode(FileUpload1.FileName);
+                    string fileExtention = System.IO.Path.GetExtension(FileUpload1.FileName);
+                    if (fileExtention == ".mp4")
+                    {
 
-                    // Call the SaveAs method to save the 
-                    // uploaded file to the specified path.
-                    // This example does not perform all
-                    // the necessary error checking.               
-                    // If a file with the same name
-                    // already exists in the specified path,  
-                    // the uploaded file overwrites it.
-                    FileUpload1.SaveAs(savePath);
+                    }
+                        // Get the name of the file to upload.
+                        string savePath = appPath + saveDir +
+                        Server.HtmlEncode(FileUpload1.FileName);
 
-                    photoPath2.Value = Server.HtmlEncode(FileUpload1.FileName);
-                    uploadedImage.ImageUrl= "Data/" + photoPath2.Value;
+                        // Call the SaveAs method to save the 
+                        // uploaded file to the specified path.
+                        // This example does not perform all
+                        // the necessary error checking.               
+                        // If a file with the same name
+                        // already exists in the specified path,  
+                        // the uploaded file overwrites it.
+                        FileUpload1.SaveAs(savePath);
+
+                        photoPath2.Value = Server.HtmlEncode(FileUpload1.FileName);
+                        uploadedImage.ImageUrl = "Data/" + photoPath2.Value;
+                    
                 }
                 else
                 {
                     // Notify the user why their file was not uploaded.
-                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Your file was not uploaded because it exceeds the 2 MB size limit.')", true);
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Your file was not uploaded because it exceeds the 9 MB size limit.')", true);
                 }
             }
         }
