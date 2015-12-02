@@ -11,9 +11,9 @@ namespace UploadMe
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (Request.Form["photoPath2"] != "")
                 uploadedImage.ImageUrl = "Data/" + Request.Form["photoPath2"];
-                
             else
                 uploadedImage.Visible = false;
         }

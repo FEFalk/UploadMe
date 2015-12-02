@@ -77,11 +77,12 @@
 
 </head>
 <body>
-    
+    <form id="form1" runat="server">
     <div class="container" id="Header">
 	
 	<img src="images/bbc.png" alt="Unable to show image."/>
 	<span class="space"></span>
+    <asp:Button ID="homeButton" OnClick="homeButton_Click" style="color : red; float : left; font-weight : bold;" runat="server" Text="Home"/>
 	<ul id="headerMenu">
             
   			<li><button class = "active" id="newsTabButton" onclick="showHeaderDiv('newsTabView', 'newsTabButton');">News</button></li>
@@ -94,7 +95,7 @@
 			<li><button class = "inactive" id="moreTabButton" onclick="showHeaderDiv('moreTabView', 'moreTabButton');">More...</button></li>	
 	</ul>
 	
-	<form><input type="text" name="search" value="Search"></form>
+	<input id="searchBar" type="text" name="search" value="Search">
 	
 	<div class="container" id="headerTabs">		
 		<div id="newsTabView" class="headerTabList"></div>
@@ -109,7 +110,7 @@
 	
 </div>
 
-    <form id="form1" runat="server">
+    
     <div id="Wrapper">
         <div>
             Username: <asp:TextBox runat="server" ID="txtUser" />

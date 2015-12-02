@@ -513,7 +513,10 @@ ul#headerMenu li button {
 #uploadDiv{
     margin : 15px;
 }
-
+#videoSource{
+    width : 100%;
+    height : 320px;
+}
 #uploadDiv .textBox, .button, .label, .dropDown, .fileUpload, .image{
     margin : 0px 5px 10px 15px;
 }

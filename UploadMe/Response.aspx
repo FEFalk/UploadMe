@@ -62,7 +62,9 @@
     <div id="Wrapper">
         <div style="float:left">
             <div class="container" id="spotlightDiv">
-                <asp:Image CssClass="image" ID="uploadedImage" runat="server"/>
+                <asp:Image CssClass="image" ID="uploadedImage" runat="server" AlternateText=""/>
+                <video id="videoSource" controls="controls" src="<%="Data/" + Request.Form["photoPath2"] %>">
+                </video> 
 
 		        <h3 id="responseTitle"><%=Request.Form["titleName"] %></h3>
                 <h4><%=Request.Form["categoryList"] %></h4>
