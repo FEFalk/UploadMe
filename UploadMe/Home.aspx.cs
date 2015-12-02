@@ -15,6 +15,16 @@ namespace UploadMe
             if(Session["Login"]==null){
                 Session["Login"] = "0";
             }
+            if ((string)Session["Login"] == "0")
+            {
+                loginButton.Visible = true;
+                logoutButton.Visible = false;
+            }
+            else
+            {
+                loginButton.Visible = false;
+                logoutButton.Visible = true;
+            }
             
         }
 
@@ -26,5 +36,15 @@ namespace UploadMe
                 Response.Redirect("Login.aspx");  
         }
 
+        protected void loginButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
+
+        protected void logoutButton_Click(object sender, EventArgs e)
+        {
+            Session["Login"] = "0";
+            Response.Redirect("Home.aspx");
+        }
     }
 }

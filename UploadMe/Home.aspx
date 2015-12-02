@@ -72,6 +72,8 @@
 	<img src="images/bbc.png" alt="Unable to show image."/>
 	<span class="space"></span>
     <asp:Button OnClick="Unnamed_Click" style="color : red; float : left; font-weight : bold" runat="server" Text="Upload"/>
+        <asp:Button CssClass="button" ID="logoutButton" runat="server" OnClick="logoutButton_Click" Text="Logout"></asp:Button>
+        <asp:Button CssClass="button" ID="loginButton" runat="server" OnClick="loginButton_Click" Text="Login"></asp:Button>
 	<ul id="headerMenu">
             
   			<li><button class = "active" id="newsTabButton" onclick="showHeaderDiv('newsTabView', 'newsTabButton');">News</button></li>
@@ -203,9 +205,9 @@
 		
 		<!-- Tab buttons -->
 		<ul id="menu">
-  			<li><button class = "active" id="sharedTabButton" onclick="showDiv('sharedTabView', 'sharedTabButton');"><b>Shared</b></button></li>
-			<li><button class = "inactive" id="readTabButton" onclick="showDiv('readTabView', 'readTabButton');"><b>Read</b></button></li>
-  			<li><button class = "inactive" id="WLTabButton" onclick="showDiv('WLTabView', 'WLTabButton');"><b>Watched/Listened</b></button></li>
+  			<li><button class = "active" id="sharedTabButton" onclick="showDiv('sharedTabView', 'sharedTabButton');" type="button"><b>Shared</b></button></li>
+			<li><button class = "inactive" id="readTabButton" onclick="showDiv('readTabView', 'readTabButton');" type="button"><b>Read</b></button></li>
+  			<li><button class = "inactive" id="WLTabButton" onclick="showDiv('WLTabView', 'WLTabButton');" type="button"><b>Watched/Listened</b></button></li>
 		</ul>
 		
 		<!-- "Shared" tab window -->

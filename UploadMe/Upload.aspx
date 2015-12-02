@@ -6,6 +6,8 @@
 <head runat="server">
     <title></title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+
 </head>
 <body>
     <form runat="server">
@@ -70,10 +72,12 @@
             <h4>Upload media:</h4>
             <asp:FileUpload CssClass="fileUpload" ID="FileUpload1" runat="server"/>
             <br />
-            <asp:Button CssClass="button" ID="uploadButton" runat="server" OnClick="uploadButton_Click" Text="Upload"></asp:Button>
+            <asp:Button CssClass="button" UseSubmitBehavior="false" ID="uploadButton" runat="server" OnClick="uploadButton_Click" Text="Upload"></asp:Button>
             <br />
-            <asp:Image CssClass="image" ID="uploadedImage" runat="server" Width="75px" Height="75px"/>
+            <asp:Image CssClass="image" ID="uploadedImage" runat="server" Width="75px" Height="75px" Visible="false"/>
             <br />
+            <video visible="false" runat="server" id="videoSourceThumbnail" controls="controls">
+            </video> 
             <h4>Pick a category:</h4>
             <asp:DropDownList CssClass="dropDown" runat="server" ID="categoryList">
                 <asp:ListItem Text="Politics"></asp:ListItem>
@@ -88,6 +92,7 @@
             <br />
             <asp:Button CssClass="button" ID="submitButton" runat="server" PostBackUrl="~/Response.aspx" Text="Submit"></asp:Button>
             <asp:hiddenfield runat="server" ID="photoPath2" OnValueChanged="photoPath2_ValueChanged" Value=""></asp:hiddenfield>
+            <asp:hiddenfield runat="server" ID="Hiddenfield1" Value=""></asp:hiddenfield>
         </div>
     </div>
    </form>
