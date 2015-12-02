@@ -30,26 +30,36 @@ namespace UploadMe
                 int fileSize = FileUpload1.PostedFile.ContentLength;
                 if (fileSize < 9000000)
                 {
+                    // Get the name of the file to upload.
+                    string savePath = appPath + saveDir +
+                    Server.HtmlEncode(FileUpload1.FileName);
+
+                    // Call the SaveAs method to save the 
+                    // uploaded file to the specified path.
+                    // This example does not perform all
+                    // the necessary error checking.               
+                    // If a file with the same name
+                    // already exists in the specified path,  
+                    // the uploaded file overwrites it.
+                    FileUpload1.SaveAs(savePath);
+                    photoPath2.Value = Server.HtmlEncode(FileUpload1.FileName);
+
                     string fileExtention = System.IO.Path.GetExtension(FileUpload1.FileName);
                     if (fileExtention == ".mp4")
                     {
-
+                        Hiddenfield1.Value = "1";
+                        videoSourceThumbnail.Visible = true;
+                        videoSourceThumbnail.Src = saveDir + photoPath2.Value;
+                        uploadedImage.Visible = false;
                     }
-                        // Get the name of the file to upload.
-                        string savePath = appPath + saveDir +
-                        Server.HtmlEncode(FileUpload1.FileName);
+                    else
+                    {
+                        videoSourceThumbnail.Visible = false;
+                        Hiddenfield1.Value = "0";
+                        uploadedImage.ImageUrl = saveDir + photoPath2.Value;
+                        uploadedImage.Visible = true;
+                    }
 
-                        // Call the SaveAs method to save the 
-                        // uploaded file to the specified path.
-                        // This example does not perform all
-                        // the necessary error checking.               
-                        // If a file with the same name
-                        // already exists in the specified path,  
-                        // the uploaded file overwrites it.
-                        FileUpload1.SaveAs(savePath);
-
-                        photoPath2.Value = Server.HtmlEncode(FileUpload1.FileName);
-                        uploadedImage.ImageUrl = "Data/" + photoPath2.Value;
                     
                 }
                 else

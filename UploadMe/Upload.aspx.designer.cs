@@ -76,6 +76,15 @@ namespace UploadMe {
         protected global::System.Web.UI.WebControls.Image uploadedImage;
         
         /// <summary>
+        /// videoSourceThumbnail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlVideo videoSourceThumbnail;
+        
+        /// <summary>
         /// categoryList control.
         /// </summary>
         /// <remarks>
@@ -101,5 +110,14 @@ namespace UploadMe {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField photoPath2;
+        
+        /// <summary>
+        /// Hiddenfield1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField Hiddenfield1;
     }
 }

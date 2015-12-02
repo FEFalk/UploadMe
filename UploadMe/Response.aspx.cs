@@ -12,10 +12,17 @@ namespace UploadMe
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (Request.Form["photoPath2"] != "")
+            if (Request.Form["photoPath2"] != "" && Request.Form["Hiddenfield1"] == "0")
+            {
                 uploadedImage.ImageUrl = "Data/" + Request.Form["photoPath2"];
-            else
-                uploadedImage.Visible = false;
+                uploadedImage.Visible = true;
+
+            }
+            else if(Request.Form["Hiddenfield1"] == "1")
+            {
+                videoSource.Src = "Data/" + Request.Form["photoPath2"];
+                videoSource.Visible = true;
+            }
         }
 
         protected void homeButton_Click(object sender, EventArgs e)
