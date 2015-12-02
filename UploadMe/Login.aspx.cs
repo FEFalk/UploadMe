@@ -16,8 +16,16 @@ namespace UploadMe
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            Session["Login"] = "1";
-            Response.Redirect("Upload.aspx");
+            if (txtUser.Text == "tulip" && txtPass.Text == "123")
+            {
+                Session["Login"] = "1";
+                Response.Redirect("Upload.aspx");
+            }
+            else
+            {
+                lblTest.Text = "The information in not correct!";
+            }
+            
         }
 
     }

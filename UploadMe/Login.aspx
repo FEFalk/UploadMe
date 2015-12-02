@@ -62,6 +62,18 @@
 	        }
 	    }
 	</script>
+    <script>
+        function loginCheck() {
+            var objUsername, objPassword;
+            objUsername = document.getElementById("<%=txtUser.ClientID%>");
+            objPassword = document.getElementById("<%=txtPass.ClientID%>");
+            if (objUsername.value == "" || objPassword == "") {    
+                alert("Empty is bad!");
+                return false;
+            }
+            return true;
+        }
+    </script>
 
 </head>
 <body>
@@ -85,31 +97,14 @@
 	<form><input type="text" name="search" value="Search"></form>
 	
 	<div class="container" id="headerTabs">		
-		<div id="newsTabView" class="headerTabList">
-		
-		</div>
-		<div id="sportTabView" class="headerTabList">
-	
-		</div>
-
-		<div id="weatherTabView" class="headerTabList">
-	
-		</div>
-		<div id="travelTabView" class="headerTabList">
-	
-		</div>
-		<div id="futureTabView" class="headerTabList">
-	
-		</div>
-		<div id="tvTabView" class="headerTabList">
-		
-		</div>
-		<div id="radioTabView" class="headerTabList">
-	
-		</div>
-		<div id="moreTabView" class="headerTabList">
-	
-		</div>
+		<div id="newsTabView" class="headerTabList"></div>
+		<div id="sportTabView" class="headerTabList"></div>
+		<div id="weatherTabView" class="headerTabList"></div>
+		<div id="travelTabView" class="headerTabList"></div>
+		<div id="futureTabView" class="headerTabList"></div>
+		<div id="tvTabView" class="headerTabList"></div>
+		<div id="radioTabView" class="headerTabList"></div>
+		<div id="moreTabView" class="headerTabList"></div>
 	</div>
 	
 </div>
@@ -122,7 +117,7 @@
             Password: <asp:TextBox runat="server" ID="txtPass" TextMode="Password" />
             <!--Lägg till validator-->
             <br />
-            <asp:Button runat="server" ID="btnLogin" Text="Login" OnClick="btnLogin_Click" />
+            <asp:Button runat="server" ID="btnLogin" Text="Login" OnClick="btnLogin_Click" OnClientClick="return loginCheck()" />
 
             <br />
             <asp:Label runat="server" ID="lblTest" />
