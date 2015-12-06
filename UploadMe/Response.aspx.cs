@@ -11,7 +11,7 @@ namespace UploadMe
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            /*Display the uploaded picture or video*/
             if (Request.Form["photoPath2"] != "" && Request.Form["Hiddenfield1"] == "0")
             {
                 uploadedImage.ImageUrl = "Data/" + Request.Form["photoPath2"];

@@ -16,6 +16,7 @@ namespace UploadMe
 
         protected void logoutButton_Click(object sender, EventArgs e)
         {
+            /*The user logs out and when clicking on upload you get redirected to login screen again*/
             Session["Login"] = "0";
             Response.Redirect("Home.aspx");
         }

@@ -7,6 +7,7 @@
 	<title>Lab1 Webapplications</title>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css"/>
 	<script>
+        /*activates the clicked tab, shared tab is automatically activated*/
 	    function showDiv(divID, buttonID) {
 	        document.getElementById(divID).style.display = "block";
 	        document.getElementById(buttonID).className = "active";
@@ -25,6 +26,7 @@
 	    }
 	</script>
 	<script>
+        /*Same as the above only news tab is first to be activated*/
 	    function showHeaderDiv(divID, buttonID) {
 	        document.getElementById(divID).style.display = "block";
 	        document.getElementById(buttonID).className = "active";
@@ -67,6 +69,7 @@
 
 <body>
     <form runat="server">
+   <!-- the headerbar on top of the webpage -->
     <div class="container" id="Header">
 	
 	<img src="images/bbc.png" alt="Unable to show image."/>
@@ -89,31 +92,14 @@
 	<input type="text" name="search" value="Search" id="searchBar" />
 	
 	<div class="container" id="headerTabs">		
-		<div id="newsTabView" class="headerTabList">
-		
-		</div>
-		<div id="sportTabView" class="headerTabList">
-	
-		</div>
-
-		<div id="weatherTabView" class="headerTabList">
-	
-		</div>
-		<div id="travelTabView" class="headerTabList">
-	
-		</div>
-		<div id="futureTabView" class="headerTabList">
-	
-		</div>
-		<div id="tvTabView" class="headerTabList">
-		
-		</div>
-		<div id="radioTabView" class="headerTabList">
-	
-		</div>
-		<div id="moreTabView" class="headerTabList">
-	
-		</div>
+		<div id="newsTabView" class="headerTabList"></div>
+		<div id="sportTabView" class="headerTabList"></div>
+		<div id="weatherTabView" class="headerTabList"></div>
+		<div id="travelTabView" class="headerTabList"></div>
+		<div id="futureTabView" class="headerTabList"></div>
+		<div id="tvTabView" class="headerTabList"></div>
+		<div id="radioTabView" class="headerTabList"></div>
+		<div id="moreTabView" class="headerTabList"></div>
 	</div>
 	
 </div>

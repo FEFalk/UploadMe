@@ -16,6 +16,7 @@ namespace UploadMe
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            /*Checks if the username and pass is correct*/
             if (txtUser.Text == "tulip" && txtPass.Text == "123")
             {
                 Session["Login"] = "1";

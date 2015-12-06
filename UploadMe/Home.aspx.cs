@@ -11,7 +11,7 @@ namespace UploadMe
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            /*Checks if the user is logged in or not*/
             if(Session["Login"]==null){
                 Session["Login"] = "0";
             }
@@ -30,6 +30,7 @@ namespace UploadMe
 
         protected void Unnamed_Click(object sender, EventArgs e)
         {
+            /*If the user is logged in the upload button goes to the upload page, if not then to login page*/
             if((string)Session["Login"] == "1")
                 Response.Redirect("Upload.aspx");  
             else

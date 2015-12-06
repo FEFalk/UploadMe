@@ -11,6 +11,7 @@
 </head>
 <body>
     <form runat="server">
+        <!--Header bar-->
     <div class="container" id="Header">
 	
 	<img src="images/bbc.png" alt="Unable to show image."/>
@@ -32,35 +33,17 @@
 	<input type="text" name="search" value="Search" id="searchBar"/>
 	
 	<div class="container" id="headerTabs">		
-		<div id="newsTabView" class="headerTabList">
-		
-		</div>
-		<div id="sportTabView" class="headerTabList">
-	
-		</div>
-
-		<div id="weatherTabView" class="headerTabList">
-	
-		</div>
-		<div id="travelTabView" class="headerTabList">
-	
-		</div>
-		<div id="futureTabView" class="headerTabList">
-	
-		</div>
-		<div id="tvTabView" class="headerTabList">
-		
-		</div>
-		<div id="radioTabView" class="headerTabList">
-	
-		</div>
-		<div id="moreTabView" class="headerTabList">
-	
-		</div>
+		<div id="newsTabView" class="headerTabList"></div>
+		<div id="sportTabView" class="headerTabList"></div>
+        <div id="weatherTabView" class="headerTabList"></div>
+		<div id="travelTabView" class="headerTabList"></div>
+		<div id="futureTabView" class="headerTabList"></div>
+		<div id="tvTabView" class="headerTabList"></div>
+		<div id="radioTabView" class="headerTabList"></div>
+		<div id="moreTabView" class="headerTabList"></div>
 	</div>
 </div>
-
-
+        <!--Upload page visuals-->
     <div id="Wrapper">
         <div id="uploadDiv">
             <h2>UploadMe!</h2>

@@ -6,24 +6,7 @@
 <head runat="server">
     	<title>Lab1 Webapplications</title>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
-	<script>
-	    function showDiv(divID, buttonID) {
-	        document.getElementById(divID).style.display = "block";
-	        document.getElementById(buttonID).className = "active";
-	        if (divID != 'sharedTabView') {
-	            document.getElementById('sharedTabView').style.display = "none";
-	            document.getElementById('sharedTabButton').className = "inactive";
-	        }
-	        if (divID != 'readTabView') {
-	            document.getElementById('readTabView').style.display = "none";
-	            document.getElementById('readTabButton').className = "inactive";
-	        }
-	        if (divID != 'WLTabView') {
-	            document.getElementById('WLTabView').style.display = "none";
-	            document.getElementById('WLTabButton').className = "inactive";
-	        }
-	    }
-	</script>
+    <!--header tabs -->
 	<script>
 	    function showHeaderDiv(divID, buttonID) {
 	        document.getElementById(divID).style.display = "block";
@@ -63,6 +46,7 @@
 	    }
 	</script>
     <script>
+        <!--Checks if the username and pass is correct-->
         function loginCheck() {
             var objUsername, objPassword;
             objUsername = document.getElementById("<%=txtUser.ClientID%>");
@@ -78,6 +62,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+    <!--header bar and tabs -->
     <div class="container" id="Header">
 	
 	<img src="images/bbc.png" alt="Unable to show image."/>
@@ -110,13 +95,12 @@
 	
 </div>
 
-    
+    <!--Username and pass textboxes-->
     <div id="Wrapper">
         <div>
             Username: <asp:TextBox runat="server" ID="txtUser" />
             <br />
-            Password: <asp:TextBox runat="server" ID="txtPass" TextMode="Password" />
-            <!--Lägg till validator-->
+            Password: <asp:TextBox runat="server" ID="txtPass" TextMode="Password" />            
             <br />
             <asp:Button runat="server" ID="btnLogin" Text="Login" OnClick="btnLogin_Click" OnClientClick="return loginCheck()" />
 
