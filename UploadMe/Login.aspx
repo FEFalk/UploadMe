@@ -67,6 +67,8 @@
 	
 	<img src="images/bbc.png" alt="Unable to show image."/>
 	<span class="space"></span>
+
+    <!-- "Home"-button -->
     <asp:Button ID="homeButton" OnClick="homeButton_Click" style="color : red; float : left; font-weight : bold;" runat="server" Text="Home"/>
 	<ul id="headerMenu">
             

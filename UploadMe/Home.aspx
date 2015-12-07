@@ -7,7 +7,7 @@
 	<title>Lab1 Webapplications</title>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css"/>
 	<script>
-        /*activates the clicked tab, shared tab is automatically activated*/
+        /*activates the clicked tab, shared tab is activated by default*/
 	    function showDiv(divID, buttonID) {
 	        document.getElementById(divID).style.display = "block";
 	        document.getElementById(buttonID).className = "active";
@@ -26,7 +26,7 @@
 	    }
 	</script>
 	<script>
-        /*Same as the above only news tab is first to be activated*/
+        /*Same as the above, news tab is activated by default*/
 	    function showHeaderDiv(divID, buttonID) {
 	        document.getElementById(divID).style.display = "block";
 	        document.getElementById(buttonID).className = "active";
@@ -74,9 +74,12 @@
 	
 	<img src="images/bbc.png" alt="Unable to show image."/>
 	<span class="space"></span>
+    <!-- "Upload"-button -->
     <asp:Button OnClick="Unnamed_Click" style="color : red; float : left; font-weight : bold" runat="server" Text="Upload"/>
-        <asp:Button CssClass="button" ID="logoutButton" runat="server" OnClick="logoutButton_Click" Text="Logout"></asp:Button>
-        <asp:Button CssClass="button" ID="loginButton" runat="server" OnClick="loginButton_Click" Text="Login"></asp:Button>
+
+    <!-- "Logout/Login"-buttons -->
+    <asp:Button CssClass="button" ID="logoutButton" runat="server" OnClick="logoutButton_Click" Text="Logout"></asp:Button>
+    <asp:Button CssClass="button" ID="loginButton" runat="server" OnClick="loginButton_Click" Text="Login"></asp:Button>
 	<ul id="headerMenu">
             
   			<li><button class = "active" id="newsTabButton" onclick="showHeaderDiv('newsTabView', 'newsTabButton');">News</button></li>

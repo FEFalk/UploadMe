@@ -41,7 +41,7 @@
 		<div id="moreTabView" class="headerTabList"></div>
 	</div>
 </div>
-            <!--Result of an upload-->
+    <!--Result of an upload-->
     <div id="Wrapper">
         <div style="float:left">
             <div class="container" id="spotlightDiv">
@@ -49,6 +49,7 @@
                 <video runat="server" id="videoSource" controls="controls" visible="false">
                 </video> 
 
+                <!-- Gets title, category and main text from previous page -->
 		        <h3 id="responseTitle"><%=Request.Form["titleName"] %></h3>
                 <h4><%=Request.Form["categoryList"] %></h4>
 		        <p id="responseText">	

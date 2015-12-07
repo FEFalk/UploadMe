@@ -16,7 +16,9 @@
 	
 	<img src="images/bbc.png" alt="Unable to show image."/>
 	<span class="space"></span>
+    <!-- "Home"-button -->
     <asp:Button ID="homeButton" OnClick="homeButton_Click" style="color : red; float : left; font-weight : bold;" runat="server" Text="Home"/>
+        <!-- "Logout"-button -->
     <asp:Button CssClass="button" ID="logoutButton" runat="server" OnClick="logoutButton_Click" Text="Logout"></asp:Button>
 	<ul id="headerMenu">
             
@@ -47,20 +49,29 @@
     <div id="Wrapper">
         <div id="uploadDiv">
             <h2>UploadMe!</h2>
+            <!-- Title -->
             <h4>Title:</h4>
             <asp:TextBox CssClass="textBox" ID="titleName" runat="server" >Enter title...</asp:TextBox>
+
+            <!-- Main text -->
             <h4>Main text:</h4>
             <asp:TextBox CssClass="textBox" ID="mainText" runat="server" TextMode="multiline" Columns="50" Rows="5">Enter main text...</asp:TextBox>
             <br />
+
+            <!-- Upload file -->
             <h4>Upload media:</h4>
             <asp:FileUpload CssClass="fileUpload" ID="FileUpload1" runat="server"/>
             <br />
             <asp:Button CssClass="button" UseSubmitBehavior="false" ID="uploadButton" runat="server" OnClick="uploadButton_Click" Text="Upload"></asp:Button>
             <br />
+
+            <!-- Uploaded file thumbnail -->
             <asp:Image CssClass="image" ID="uploadedImage" runat="server" Width="75px" Height="75px" Visible="false"/>
             <br />
             <video visible="false" runat="server" id="videoSourceThumbnail" controls="controls">
             </video> 
+
+            <!-- Category -->
             <h4>Pick a category:</h4>
             <asp:DropDownList CssClass="dropDown" runat="server" ID="categoryList">
                 <asp:ListItem Text="Politics"></asp:ListItem>
